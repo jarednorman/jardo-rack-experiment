@@ -16,6 +16,7 @@ GEM
     pry-stack_explorer (0.6.1)
       binding_of_caller (~> 1.0)
       pry (~> 0.13)
+    rack (2.2.3)
     rainbow (3.0.0)
     regexp_parser (2.1.1)
     rexml (3.2.5)
@@ -44,6 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   pry-stack_explorer
+  rack (~> 2.2)
   standard
 
 RUBY VERSION
