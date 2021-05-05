@@ -11,3 +11,7 @@ group :development, :test do
   gem "pry-stack_explorer"
   gem "standard", require: false
 end
+
+group :test do
+  gem "rspec"
+end
