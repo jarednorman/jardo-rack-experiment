@@ -1,13 +1,17 @@
 module Jardo
   class << self
     def application
-      @application ||= Application.new
+      Rack::Builder.new do
+        run Jardo.router
+      end
     end
-  end
 
-  class Application
-    def call(env)
-      [200, {'Content-Type' => 'text/plain'}, ['Jardo.dev v1']]
+    def router
+      @router ||= Hanami::Router.new do
+        root to: ->(env) {
+          [200, {"Content-Type" => "text/plain"}, ["Jardo.dev v1"]]
+        }
+      end
     end
   end
 end
