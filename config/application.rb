@@ -8,9 +8,7 @@ module Jardo
 
     def router
       @router ||= Hanami::Router.new do
-        root to: ->(env) {
-          [200, {"Content-Type" => "text/plain"}, ["Jardo.dev v1"]]
-        }
+        root to: HomeAction
       end
     end
   end

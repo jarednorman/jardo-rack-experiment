@@ -53,6 +53,7 @@ GEM
       rubocop (= 1.13.0)
       rubocop-performance (= 1.11.1)
     unicode-display_width (2.0.0)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-linux
@@ -63,6 +64,7 @@ DEPENDENCIES
   puma
   rack
   standard
+  zeitwerk
 
 RUBY VERSION
    ruby 3.0.1p64
