@@ -7,3 +7,9 @@ preload_app!
 
 port ENV.fetch('PORT', 6969)
 environment ENV.fetch('RACK_ENV', "development")
+
+on_worker_boot do
+  Listen.to(*JARDO_LOADER.dirs) do
+    JARDO_LOADER.reload
+  end.start if JARDO_LOADER.reloading_enabled?
+end
