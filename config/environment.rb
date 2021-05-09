@@ -13,5 +13,3 @@ JARDO_LOADER = Zeitwerk::Loader.new.tap do |loader|
   loader.enable_reloading if ENV["RACK_ENV"] == "development"
   loader.setup
 end
-
-require_relative "application"

@@ -1,13 +1,13 @@
 module Jardo
   class << self
-    def application
-      Rack::Builder.new do
+    def rack_app
+      @rack_app ||= Rack::Builder.new do
         run Jardo.router
-      end
+      end.to_app
     end
 
     def router
-      @router ||= Hanami::Router.new do
+      Hanami::Router.new do
         root to: HomeAction
       end
     end

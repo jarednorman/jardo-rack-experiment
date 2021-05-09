@@ -1,3 +1,3 @@
 require_relative "config/environment"
 
-run Jardo.application
+run -> (env) { Jardo.rack_app.call(env) }
