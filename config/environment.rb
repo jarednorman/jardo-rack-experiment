@@ -5,11 +5,12 @@ require 'bundler'
 
 Bundler.require(:default, ENV["RACK_ENV"])
 
-JARDO_LOADER = Zeitwerk::Loader.new.tap do |loader|
-  loader.push_dir(
-    File.join(File.dirname(__FILE__), "../src/")
-  )
+$LOAD_PATH << File.join(File.dirname(__FILE__), "../lib")
 
-  loader.enable_reloading if ENV["RACK_ENV"] == "development"
-  loader.setup
-end
+require 'jardo_loader'
+require 'jardo_loader_middleware'
+
+JARDO_LOADER = JardoLoader.new(
+  path: File.join(File.dirname(__FILE__), "../src/"),
+  enable_reloading: ENV["RACK_ENV"] == "development"
+)
