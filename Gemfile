@@ -12,6 +12,10 @@ group :development, :test do
   gem "standard", require: false
 end
 
+group :development do
+  gem "listen"
+end
+
 group :test do
   gem "rspec"
 end
