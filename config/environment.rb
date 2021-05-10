@@ -5,6 +5,8 @@ require 'bundler'
 
 Bundler.require(:default, ENV["RACK_ENV"])
 
+require 'json'
+
 $LOAD_PATH << File.join(File.dirname(__FILE__), "../lib")
 
 require 'jardo_loader'

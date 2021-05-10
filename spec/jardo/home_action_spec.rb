@@ -6,6 +6,6 @@ RSpec.describe Jardo::HomeAction do
 
     let(:request) { Rack::Request.new({}) }
 
-    it { is_expected.to eq [200, {"Content-Type" => "text/plain"}, ["Jardo.dev v2"]] }
+    specify { expect(subject.first).to eq 200 }
   end
 end

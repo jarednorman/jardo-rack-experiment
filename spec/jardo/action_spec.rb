@@ -21,4 +21,25 @@ RSpec.describe Jardo::Action do
       expect(subject).to eq [200, {}, "success"]
     end
   end
+
+  describe "#render" do
+    subject { action.render response }
+
+    let(:action) { described_class.new }
+
+    let(:response) {
+      double "response",
+        status: 200,
+        body: {foo: "bar"}.to_json,
+        content_type: "application/json"
+    }
+
+    it "returns a Rack response" do
+      expect(subject).to eq [
+        200,
+        {"Content-Type" => "application/json"},
+        ['{"foo":"bar"}']
+      ]
+    end
+  end
 end

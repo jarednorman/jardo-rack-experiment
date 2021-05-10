@@ -6,5 +6,13 @@ module Jardo
         new.call(request)
       end
     end
+
+    def render(response)
+      [
+        response.status,
+        {"Content-Type" => response.content_type},
+        [response.body]
+      ]
+    end
   end
 end
