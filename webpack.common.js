@@ -7,7 +7,6 @@ module.exports = {
     wanderer: path.resolve(__dirname, './assets/wanderer.js')
   },
   output: {
-    filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, 'public/assets'),
     publicPath: '/assets/'
   },
