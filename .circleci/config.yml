@@ -9,8 +9,9 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - run: node --version
       - ruby/bundle-install
+      - run: npm install
+      - run: npm run build
       - run:
           name: Run Tests
           command: bundle exec rspec
