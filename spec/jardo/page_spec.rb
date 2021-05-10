@@ -19,7 +19,7 @@ RSpec.describe Jardo::Page do
     before do
       allow(layout)
         .to receive(:render)
-        .with(["foo", "bar"])
+        .with(content: ["foo", "bar"])
         .and_return "whatever"
     end
 

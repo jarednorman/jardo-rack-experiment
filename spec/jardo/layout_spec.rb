@@ -2,7 +2,11 @@ require "spec_helper"
 
 RSpec.describe Jardo::Layout do
   describe "#render" do
-    subject { layout.render(["<p>", "foo", "</p>"]) }
+    subject {
+      layout.render(
+        content: ["<p>", "foo", "</p>"]
+      )
+    }
 
     let(:layout) { described_class.new }
 

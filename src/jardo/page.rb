@@ -14,7 +14,7 @@ module Jardo
     end
 
     def body
-      @layout.render(@content)
+      @layout.render(content: @content)
     end
   end
 end
