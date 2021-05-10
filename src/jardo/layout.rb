@@ -4,18 +4,22 @@ module Jardo
       <<~HTML
         <html>
           <head>
+            <meta charset="utf-8" />
+
             <title>#{title} | jardo.dev</title>
 
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
 
-            <link rel="stylesheet" href="https://use.typekit.net/zjn1exh.css">
+            <link rel="stylesheet" href="https://use.typekit.net/zjn1exh.css" />
 
             <style>
               body {
-                font-family: "Usual";
+                font-family: "usual";
               }
             </style>
+
+            <script defer src="/assets/wanderer.js"></script>
           </head>
           <body>
             <h1>Jardo.dev</h1>

@@ -4,7 +4,7 @@
   "description": "Feel the rippling vortex alter your mind.",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "author": "Jared Norman <hello@jardo.dev>",
   "license": "UNLICENSED",
