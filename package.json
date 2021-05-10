@@ -4,11 +4,15 @@
   "description": "Feel the rippling vortex alter your mind.",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "author": "Jared Norman <hello@jardo.dev>",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.7.0",
     "webpack-manifest-plugin": "^3.1.1"
