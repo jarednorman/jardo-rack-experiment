@@ -1,0 +1,22 @@
+{
+  "name": "jardo.dev",
+  "version": "69.69.69",
+  "description": "",
+  "main": "assets/jardo.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarednorman/jardo.dev.git"
+  },
+  "author": "Jared Norman <hello@jardo.dev>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jarednorman/jardo.dev/issues"
+  },
+  "homepage": "https://github.com/jarednorman/jardo.dev#readme"
+}
