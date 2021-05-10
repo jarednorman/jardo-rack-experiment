@@ -1,3 +1,5 @@
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+
 const path = require('path');
 
 module.exports = {
@@ -5,5 +7,10 @@ module.exports = {
   output: {
     filename: 'wanderer.js',
     path: path.resolve(__dirname, 'public/assets')
-  }
+  },
+  plugins: [
+    new WebpackManifestPlugin({
+      publicPath: "/assets/"
+    })
+  ]
 }
