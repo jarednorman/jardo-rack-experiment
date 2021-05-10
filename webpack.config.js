@@ -6,11 +6,11 @@ module.exports = {
   entry: './assets/wanderer.js',
   output: {
     filename: 'wanderer.js',
-    path: path.resolve(__dirname, 'public/assets')
+    path: path.resolve(__dirname, 'public/assets'),
+    publicPath: '/assets/'
   },
   plugins: [
     new WebpackManifestPlugin({
-      publicPath: "/assets/"
     })
   ]
 }
