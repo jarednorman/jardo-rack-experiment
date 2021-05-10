@@ -19,7 +19,7 @@ module Jardo
               }
             </style>
 
-            <script defer src="/assets/wanderer.js"></script>
+            <script defer src="#{Jardo::Assets["wanderer.js"]}"></script>
           </head>
           <body>
             <h1>Jardo.dev</h1>
