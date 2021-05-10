@@ -5,10 +5,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/ruby:3.0.1
+      - image: cimg/ruby:3.0.1-node
     executor: ruby/default
     steps:
       - checkout
+      - run: node --version
       - ruby/bundle-install
       - run:
           name: Run Tests
