@@ -13,11 +13,7 @@ module Jardo
 
             <link rel="stylesheet" href="https://use.typekit.net/zjn1exh.css" />
 
-            <style>
-              body {
-                font-family: "usual";
-              }
-            </style>
+            <link rel="stylesheet" href="#{Jardo::Assets["suit.css"]}" />
 
             <script defer src="#{Jardo::Assets["wanderer.js"]}"></script>
           </head>
